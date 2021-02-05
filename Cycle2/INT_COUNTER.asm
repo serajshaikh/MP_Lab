@@ -1,0 +1,17 @@
+START:	   MVI A,0FFH
+	   MVI B,00
+
+LOOP:	   STA 5001
+	   CMP B
+	   JZ END
+	   MVI C,02
+	   CALL DELAY
+	   DCR A
+	   JMP LOOP
+
+DELAY:	   DCR C
+	   JNZ DELAY
+	   RET
+
+END:	   HLT
+	   RET

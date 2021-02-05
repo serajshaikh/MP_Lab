@@ -1,0 +1,14 @@
+;<Program title>
+
+jmp start
+;ASCII TO HEX
+;data
+;code
+start: nop
+LDA 0010H
+SUI 30H
+CPI 0AH
+JC JUMP
+SUI 07H
+JUMP:STA 0000H
+HLT
